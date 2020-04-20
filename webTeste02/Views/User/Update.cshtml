@@ -1,0 +1,61 @@
+﻿
+@model webTeste02.Models.User
+<section class="content-header">
+    <h1>
+        usuários
+    </h1>
+</section>
+<!-- Main content -->
+<section class="content container-fluid">
+    <!-- Horizontal Form -->
+    <div class="box box-info">
+        <div class="box-header with-border">
+            <h3 class="box-title">Atualizar Usuário</h3>
+        </div>
+        <!-- /.box-header -->
+        <!-- form start -->
+        <form class="form-horizontal" method="post" action="/User/UpdateUser">
+            <div class="box-body">
+                <div class="form-group">
+                    <label for="inputEmail3" class="col-sm-2 control-label">Email</label>
+                    <div class="col-sm-10">
+                        <input type="Email" class="form-control" name="email" value="@Model.email">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="inputEmail3" class="col-sm-2 control-label">Nome</label>
+                    <div class="col-sm-10">
+                        <input type="text" class="form-control" name="Nome" placeholder="Nome" value="@Model.Nome">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="inputEmail3" class="col-sm-2 control-label">Data de Nascimento</label>
+                    <div class="col-sm-10">
+                        <input type="text" class="form-control" name="DataNascimento" placeholder="2002-02-28" value="@Model.DataNascimento">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="inputEmail3" class="col-sm-2 control-label">Documento</label>
+                    <div class="col-sm-10">
+                        <input type="text" class="form-control" name="Documento" placeholder="Documento" value="@Model.Documento">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="inputEmail3" class="col-sm-2 control-label">Nivel</label>
+                    <div class="col-sm-10">
+                        <input type="text" class="form-control" disabled name="Nivel" placeholder="Nivel" value="@Model.Nivel">
+                    </div>
+                </div>
+
+                <input type="hidden" name="id" value="@Model.id" />
+            </div>
+            <!-- /.box-body -->
+            <div class="box-footer">
+                <button type="submit" class="btn btn-default">Cancel</button>
+                <button type="submit" class="btn btn-info pull-right">Update</button>
+            </div>
+            <!-- /.box-footer -->
+        </form>
+    </div>
+    <!-- /.box -->
+</section>
